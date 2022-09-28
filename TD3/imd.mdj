@@ -4907,7 +4907,8 @@
 								"$ref": "AAAAAAGDYGOKVEF7AnU="
 							},
 							"name": "roomNumber",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						}
 					],
 					"operations": [
@@ -4979,7 +4980,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGDYGS560HCLJs="
 							},
-							"name": "isOpen"
+							"name": "isOpen",
+							"type": ""
 						}
 					],
 					"operations": [
@@ -5184,7 +5186,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGDYGgTD0RNas0="
 							},
-							"name": "roomNumber"
+							"name": "roomNumber",
+							"type": ""
 						}
 					],
 					"operations": [

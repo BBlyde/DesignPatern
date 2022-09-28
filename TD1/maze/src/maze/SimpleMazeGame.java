@@ -31,6 +31,8 @@ public class SimpleMazeGame {
         return maze1;
     }
 
+    /*Bad solution */
+    /*
     public Maze createEnchantedMaze(){
         Maze maze1 = new Maze();
 
@@ -79,7 +81,7 @@ public class SimpleMazeGame {
         maze1.addRoom(room2);
 
         return maze1;
-    }
+    }*/
 
     //Inconvénients est que le code n'est pas réutilisable
 }
