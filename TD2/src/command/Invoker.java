@@ -1,4 +1,4 @@
-package Command;
+package command;
 import java.util.Stack;
 
 public class Invoker {

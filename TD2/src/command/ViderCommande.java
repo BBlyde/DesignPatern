@@ -1,10 +1,10 @@
-package Command;
+package command;
 
-public class RemplirCommande implements Commande{
+public class ViderCommande implements Commande{
     private Can can;
     private int ancienVolume;
 
-    public RemplirCommande(Can can){
+    public ViderCommande(Can can){
         this.can = can;
         ancienVolume = -1;
     }
@@ -12,7 +12,7 @@ public class RemplirCommande implements Commande{
     @Override
     public void executer(){
         ancienVolume = can.getVolume();
-        can.fill();
+        can.empty();
     }
 
     @Override

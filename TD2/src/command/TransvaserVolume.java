@@ -1,4 +1,4 @@
-package Command;
+package command;
 
 public class TransvaserVolume implements Commande{
     private Can can1;
