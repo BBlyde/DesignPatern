@@ -3,7 +3,7 @@
 	<!-- Defining project properties -->
 	<property name="SRC" value="src"/>
 	<property name="BIN" value="bin"/>
-	<property name="PROG" value="Main"/>
+	<property name="PROG" value="Command.Main"/>
 
 	<!-- Defining project classpath -->
 	<path id="project.classpath">

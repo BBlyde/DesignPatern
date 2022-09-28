@@ -4,7 +4,7 @@ public class RemplirCommande implements Commande{
     private Can can;
     private int ancienVolume;
 
-    public RemplirCommande(Can can, int ancienVolume){
+    public RemplirCommande(Can can){
         this.can = can;
         ancienVolume = -1;
     }

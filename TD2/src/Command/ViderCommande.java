@@ -4,7 +4,7 @@ public class ViderCommande implements Commande{
     private Can can;
     private int ancienVolume;
 
-    public ViderCommande(Can can, int ancienVolume){
+    public ViderCommande(Can can){
         this.can = can;
         ancienVolume = -1;
     }

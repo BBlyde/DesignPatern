@@ -6,7 +6,7 @@ public class TransvaserVolume implements Commande{
     private int ancienVolume1;
     private int ancienVolume2;
 
-    public TransvaserVolume(Can can1, Can can2, int ancienVolume1, int ancienVolume2){
+    public TransvaserVolume(Can can1, Can can2){
         this.can1 = can1;
         this.can2 = can2;
         ancienVolume1 = -1;
