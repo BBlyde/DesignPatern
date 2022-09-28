@@ -1,4 +1,4 @@
-package water;
+package Command;
 
 public class Can {
 
