@@ -13,7 +13,7 @@ public class Game {
                 case -1:
                     System.out.println(p2.getName() + "wins the round");
                     p2.addPoint();
-                    break;            
+                    break;
                 default:
                     System.out.println("Draw");
                     break;
@@ -30,7 +30,8 @@ public class Game {
     public static void main (String args[]){
         Player p1 = new Player("Blyde", new StrategyTwo());
         Player p2 = new Player("Bot", new StrategyOne());
-        
-        game(p1, p2, 5);
+        Player p3 = new Player("Bot2", new StrategyThree(Attack.ROCK));
+        //game(p1, p2, 5);
+        game(p1,p3,3);
     }
 }

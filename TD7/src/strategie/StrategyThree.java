@@ -1,11 +1,15 @@
 package strategie;
 
 public class StrategyThree implements Strategy{
+    private Attack spam;
+
+    public StrategyThree(Attack a){
+        spam = a;
+    }
 
     @Override
     public Attack getMove() {
-        // TODO Auto-generated method stub
-        return null;
+        return spam;
     }
     
 }
