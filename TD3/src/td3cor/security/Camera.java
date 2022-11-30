@@ -3,15 +3,15 @@ package security;
 public class Camera {
 
 	public void turnOn() {
-		System.out.println("La caméra est allumée.");
+		System.out.println("La camï¿½ra est allumï¿½e.");
 	}
 	
 	public void turnOff() {
-		System.out.println("La caméra est éteinte.");
+		System.out.println("La camÃ©ra est ï¿½teinte.");
 	}
 	
 	public void rotate() {
-		System.out.println("La caméra pivote.");
+		System.out.println("La camï¿½ra pivote.");
 	}
 	
 }
