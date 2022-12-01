@@ -45,9 +45,7 @@ public class SeasonCycle extends Observable {
 			f.addObserver(flit);
 		}
 		for (int i = 0; i < 4; i++) {
-			System.out.println(">>> "
-					+ Season.values()[(cycle.getSeason().ordinal() + 1) % 4]
-					+ " <<<");
+			System.out.println(">>> " + Season.values()[(cycle.getSeason().ordinal() + 1) % 4] + " <<<");
 			cycle.next();
 		}
 	}
