@@ -1,3 +1,4 @@
+package td;
 public class Food extends Product{
     
     public static final Food Patisserie = new Food("Patisserie", 2.25);

@@ -1,3 +1,4 @@
+package td;
 public abstract class Product {
 
     protected double price;
