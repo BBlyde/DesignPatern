@@ -1,0 +1,38 @@
+import java.util.Observable;
+import java.util.Observer;
+
+public class HummingBird implements Observer {
+	@Override
+	public void update(Observable obs, Object o) {
+		Flower flower = (Flower) obs;
+		if (flower.isBlooming()) {
+			System.out.println("L'abeille butine une fleur.");
+		}
+	}
+}
+
+public class Flower extends Observable implements Observer {
+	...
+	public Flower(Season season) {
+		...
+	}
+
+	public void bloom() {
+		setChanged();
+		notifyObservers();
+	}
+
+	@Override
+	public void update(Observable obs, Object o) {
+		SeasonCycle season = (SeasonCycle) obs;
+		if (season.getSeason().equals(this.getSeason()) && !isBlooming()) {
+			this.bloom();
+		}
+	}
+}
+
+Méthode Observable :
+setChanged() : publisher, marque objet observable
+notifyObservers() : publisher, notifie les observateurs du changement
+addObserver() : main, ajoute un observateur
+deleteObserver() : main, supprimer un observateur
