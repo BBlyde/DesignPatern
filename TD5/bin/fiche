@@ -1,0 +1,63 @@
+/* Composite */
+
+public abstract class Order {
+	public abstract double getPrice();
+	//...méthode()
+	public void add(Order o) {}
+	public void remove(Order o) {}
+	public Order getChild(int i) {return null;}
+}
+public class OrderComposite extends Order {
+	private List<Order> children;
+	public OrderComposite() {
+		this.children = new LinkedList<Order>();
+	}
+	public void add(Order o) {children.add(o);}
+	public void remove(Order o) {children.remove(o);}
+	public Order getChild(int i) {return children.get(i);}
+
+	@Override
+	public double getPrice() {...}
+}
+public class Menu extends Order {
+	private Beverage beverage;
+	private Food food;
+	public Menu(Beverage b, Food f) {this.beverage = b;this.food = f;}
+
+	@Override
+	public double getPrice() {
+		return (this.beverage.getPrice() + this.food.getPrice()) * 0.9;
+	}
+}
+public class Client {
+	public static void main(String[] args) {
+		Order simpleOrder = new Cake();
+		simpleOrder.total();
+
+		Order compositeOrder = new OrderComposite();
+		compositeOrder.add(new Menu(new Chocolate(), new Muffin()));
+		compositeOrder.add(new Coffee());
+		compositeOrder.total();
+		System.out.println();
+	}
+}
+
+/* Décorateur */
+public abstract class Beverage extends Order {/* vide */}
+
+public abstract class CondimentDecorator extends Beverage {
+	protected Beverage decorated;
+	public CondimentDecorator(Beverage b) {
+		this.decorated = b;
+	}
+}
+
+public class Milk extends CondimentDecorator {
+	public Milk(Beverage b) {
+		super(b);
+	}
+	public double getPrice() {
+		return this.decorated.getPrice() + 0.2;
+	}
+    ...
+}

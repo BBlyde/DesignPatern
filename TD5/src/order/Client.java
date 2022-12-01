@@ -25,12 +25,12 @@ public class Client {
 		System.out.println();
 		
 		// Decorator pattern
-		Order orderWithCondiments = new OrderComposite();
+		/*Order orderWithCondiments = new OrderComposite();
 		orderWithCondiments.add(new Menu(new Chocolate(), new Muffin()));
 		orderWithCondiments.add(new Mocha(new Mocha(new Coffee())));
 		orderWithCondiments.add(new Milk(new Soy(new Coffee())));
 		System.out.println(">>> Commande avec condiments <<<");
-		orderWithCondiments.total();
+		orderWithCondiments.total();*/
 	}
 
 }
