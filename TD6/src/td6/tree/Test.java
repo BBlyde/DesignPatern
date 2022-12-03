@@ -1,7 +1,7 @@
 package td6.tree;
 
 import java.util.Iterator;
-import tree.iterator.*;
+import td6.tree.iterator.*;
 
 /*Tree:
            1

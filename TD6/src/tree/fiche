@@ -1,0 +1,26 @@
+
+public class InOrderIterator<V> implements Iterator<V> {
+	private Tree<V> current;    //state
+	public InOrderIterator(Tree<V> t) {
+		... //constructeur
+	}
+	@Override                       /* Overriding default methods */
+	public boolean hasNext() {...}
+	@Override
+	public V next() {...}
+	@Override
+	public void remove() {throw new UnsupportedOperationException();}
+}
+
+public class Tree<V> implements Iterable<V> {
+	... //attributs and methods to define the ConcreteCollection
+	@Override                   /* Overriding default methods */
+	public Iterator<V> iterator() {...}     //createIterator()
+}
+
+public class Main {
+	public static void main(String[] args) {
+		... //iterating
+	}
+}
+
