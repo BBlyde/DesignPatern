@@ -1,14 +1,20 @@
 package tree;
 
-
 import java.util.Iterator;
 
-import tree.iterator.PreOrder;
+import tree.iterator.InOrderIterator;
+import tree.iterator.PostOrderIterator;
+import tree.iterator.PreOrderIterator;
 
 public class Tree<V> implements Iterable<V> {
 
+	public enum Order {
+		PREFIXE, INFIXE, POSTFIXE
+	};
+
 	private Tree<V> left, right, parent;
 	private V value;
+	private Order order;
 
 	public Tree(V value, Tree<V> left, Tree<V> right) {
 		this.value = value;
@@ -21,6 +27,7 @@ public class Tree<V> implements Iterable<V> {
 		if (this.right != null) {
 			this.right.parent = this;
 		}
+		this.order = Order.INFIXE;
 	}
 
 	public Tree(V value) {
@@ -28,23 +35,44 @@ public class Tree<V> implements Iterable<V> {
 	}
 
 	public Tree<V> getLeft() {
-		return left;
+		return this.left;
 	}
 
 	public Tree<V> getRight() {
-		return right;
+		return this.right;
 	}
 
 	public Tree<V> getParent() {
-		return parent;
+		return this.parent;
 	}
 
 	public V getValue() {
-		return value;
+		return this.value;
 	}
 
+	public Order getOrder() {
+		return this.order;
+	}
+
+	public void setOrder(Order o) {
+		this.order = o;
+	}
+
+	@Override
 	public Iterator<V> iterator() {
-		return new PreOrder<>(this);
+		Iterator<V> it = null;
+		switch (this.order) {
+		case PREFIXE:
+			it = new PreOrderIterator<V>(this);
+			break;
+		case INFIXE:
+			it = new InOrderIterator<V>(this);
+			break;
+		case POSTFIXE:
+			it = new PostOrderIterator<V>(this);
+			break;
+		}
+		return it;
 	}
 
 }

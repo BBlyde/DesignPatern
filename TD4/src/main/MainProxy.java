@@ -19,8 +19,8 @@ public class MainProxy {
 		System.out.println(">>> Proxy facture <<<");
 		InvoiceProxy invoiceProxy = new InvoiceProxy();
 		run(invoiceProxy);
-		System.out.println("Coût total : " + invoiceProxy.totalCost());
-		System.out.println();
+		System.out.println("Coï¿½t total : " + invoiceProxy.totalCost());
+		/*System.out.println();
 		System.out
 				.println(">>> Proxy authentification requise (mdp=1234) pour les services 3 et 4 <<<");
 		Provider protectionProxy = new ProtectionProxy(new RealProvider(),
@@ -31,7 +31,7 @@ public class MainProxy {
 				.println(">>> Proxy facture + authentification requise (mdp=0000) pour les services 3 et 4 <<<");
 		Provider p = new ProtectionProxy(invoiceProxy, "0000");
 		run(p);
-		System.out.println("Coût total : " + invoiceProxy.totalCost());
+		System.out.println("Coï¿½t total : " + invoiceProxy.totalCost());*/
 	}
 
 }

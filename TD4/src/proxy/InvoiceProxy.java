@@ -5,7 +5,7 @@ import provider.RealProvider;
 
 public class InvoiceProxy implements Provider {
 
-	private Provider provider;
+	private RealProvider provider;
 
 	private int[] nbUses;
 
