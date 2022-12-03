@@ -1,0 +1,18 @@
+public class Singleton{
+    private static Logger uniqueInstance = null; //Lazy Instanciation
+    private static Logger uniqueInstance = new Logger(); //Eager Instanciation
+
+    public static Singleton getInstance(){
+        /* Lazy Instanciation */
+        if(uniqueInstance == null){
+            uniqueInstance = new Singleton();
+        }
+        /*  */
+        return uniqueInstance;
+    }
+}
+...
+Singleton s = Singleton.getInstance();
+
+
+

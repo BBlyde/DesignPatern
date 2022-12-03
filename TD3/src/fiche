@@ -1,0 +1,31 @@
+public class SousSystemeFacade {
+    ...         //Attribut du sous système
+	public SousSystemeFacade(...) {
+        ...
+	}
+	public void methode1() {
+        ...
+	}
+	public void methode2() {
+		...
+	}
+    ...
+}
+
+public class ClientUsingFacade {
+
+	private soussytemeFacade ssF;
+
+	public ClientUsingFacade() {
+		this.ssf = new soussytemeFacade(...);
+	}
+
+	public soussytemeFacade getFacade() {
+		return this.ssf;
+	}
+
+	public static void main(String[] args) {
+		new ClientUsingFacade().getFacade().methode1();
+	}
+}
+
