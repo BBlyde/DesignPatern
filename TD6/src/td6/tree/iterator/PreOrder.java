@@ -1,7 +1,7 @@
-package tree.iterator;
+package td6.tree.iterator;
 
 import java.util.Iterator;
-import tree.Tree;
+import td6.tree.Tree;
 
 public class PreOrder<V> implements Iterator<V>{
     private Tree<V> tree;

@@ -1,4 +1,4 @@
-package tree;
+package td6.tree;
 
 import java.util.Iterator;
 import tree.iterator.*;

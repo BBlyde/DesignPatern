@@ -1,9 +1,9 @@
-package tree;
+package td6.tree;
 
 
 import java.util.Iterator;
 
-import tree.iterator.PreOrder;
+import td6.tree.iterator.PreOrder;
 
 public class Tree<V> implements Iterable<V> {
 
