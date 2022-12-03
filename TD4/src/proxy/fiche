@@ -1,0 +1,41 @@
+public interface Provider { //défintion de l'interface
+	void service1();
+	void service2();
+	void service3();
+	void service4();
+}
+
+public class InvoiceProxy implements Provider { //Classe du proxy qui
+	private RealProvider provider;              //qui étend l'interface
+	... //attributs de classe
+	public InvoiceProxy() {
+		... //constructeur avec attributs
+	}
+	@Override
+	public void service1() {
+		this.provider.service1();
+		nbUses[0]++;
+	}
+	... //Override de toutes les méthodes de l'interface
+	public double totalCost() { //Méthode random
+		... //calcul
+	}
+}
+
+public class MainProxy {
+	private static void run(Provider p) {   //Méthode appellé dans le main  
+		p.service1();                       //faisant appel à l'interface 
+		p.service2();                       //qui délègue au Proxy
+		p.service1();
+		p.service4();
+		p.service3();
+	}
+
+	public static void main(String[] args) {
+		InvoiceProxy invoiceProxy = new InvoiceProxy(); //instanciation du proxy
+		run(invoiceProxy);  //appel de la méthode run avec le proxy en param
+		System.out.println("Co�t total : " + invoiceProxy.totalCost()); //exemple
+	}
+}
+
+
