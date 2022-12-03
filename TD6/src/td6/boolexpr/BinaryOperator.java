@@ -1,4 +1,4 @@
-package boolexpr;
+package td6.boolexpr;
 
 public abstract class BinaryOperator implements Operator {
 

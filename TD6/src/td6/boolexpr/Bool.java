@@ -1,4 +1,4 @@
-package boolexpr;
+package td6.boolexpr;
 
 public class Bool implements Node {
 
