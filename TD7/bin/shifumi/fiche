@@ -1,0 +1,28 @@
+
+public interface Strategy { /* Strategy Interface */
+	Attack getAttack();
+}
+
+public class RandomStrategy implements Strategy { /* ConcreteStrategy */
+	@Override
+	public Attack getAttack() {    // Overriding methods
+		return Attack.values()[new Random().nextInt(3)];    //example
+	}
+}
+
+public class Player { /* Context Class */
+    ... // player attributs
+	private Strategy strategy;  //strategy attribut
+
+    public Player(Strategy strategy) {  //constructor
+		this.strategy = strategy;
+	}
+
+	... // player methods
+
+	public static void main(String[] args) {
+		Player p1 = new Player(new StrategyTwo()); //instancing new player with
+                                                    //the type of algorithm
+        ... //stuff
+	}
+}

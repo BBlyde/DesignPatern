@@ -1,0 +1,31 @@
+
+public interface DigicodeState {    /* Interface State */
+    public void appuyer(Digicode d);
+}
+
+public class State0 implements DigicodeState {  /* State number x */
+    @Override
+    public void appuyer(Digicode d){    //return new state
+        ... d.setState(new State1()); //setting new state
+    }
+}
+
+public class Digicode {             /* Main object */
+    private DigicodeState state = new State0(); //Setting first state
+
+    public void setState(DigicodeState s){  //setState Method that 
+        state = s;                          //change current state
+    }
+
+    public void appuyer(){          //calling the specific
+        state.appuyer(this);             //state class
+    }
+
+    public static void main(String args[]){     /* Main method */
+        Digicode d1 = new Digicode();           
+        
+        ...                         //Behaviour thing that calls
+        d1.appuyer(sc.next());      //the new state
+    }
+}
+
